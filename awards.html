@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arun Maini - Awards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    section {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 700px;
+
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Arun Maini - Tech Guru</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Biography</a>
+    <a href="awards.html">Awards</a>
+    <a href="contributions.html">Contributions</a>
+  </nav>
+
+  <section>
+    <h2>Awards and Distinctions</h2>
+    <ul>
+      <li>2021 Streamy Awards	Technology</li>
+      <li>2022	Streamy Awards Technology</li>
+    </ul>
+
+    <h2>Submit New Award</h2>
+    <form id="awardForm">
+      <label for="newAward">New Award:</label>
+      <input type="text" id="newAward" name="newAward" required>
+      <button type="button" onclick="addNewAward()">Submit</button>
+    </form>
+  </section>
+
+  <script>
+    function addNewAward() {
+      var newAward = document.getElementById("newAward").value;
+      var awardsList = document.querySelector("ul");
+      
+      
+      var listItem = document.createElement("li");
+      listItem.textContent = newAward;
+
+    
+      awardsList.appendChild(listItem);
+
+      document.getElementById("newAward").value = "";
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2023 Arun Maini - Tech Guru</p>
+  </footer>
+
+</body>
+
+</html>
